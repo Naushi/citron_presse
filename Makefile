@@ -2,4 +2,10 @@ compile-requirements:
 	pip-compile requirements.in
 
 lint:
-	black .
+	isort app/ --check
+	black app/ --check
+	mypy app/
+
+format:
+	isort app/
+	black app/

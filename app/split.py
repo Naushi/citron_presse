@@ -1,13 +1,16 @@
 import glob
 import os
-from PyPDF2 import PdfFileWriter, PdfFileReader
+from typing import NoReturn
+
+from PyPDF2 import PdfFileReader, PdfFileWriter
 
 
-def list_files():
-    for f in glob.glob('./PDF/**/*.pdf', recursive=True):
+def list_files() -> None:
+    for f in glob.glob("./PDF/**/*.pdf", recursive=True):
         split_file(f)
 
-def split_file(filename: str):
+
+def split_file(filename: str) -> None:
     print(f"Handling {filename}")
     pdf_name = os.path.basename(filename)[:-4]
     pdf_path = os.path.dirname(filename)
@@ -19,6 +22,7 @@ def split_file(filename: str):
         output.addPage(input_pdf.getPage(page_number))
         with open(page_filename, "wb") as output_stream:
             output.write(output_stream)
+
 
 if __name__ == "__main__":
     list_files()

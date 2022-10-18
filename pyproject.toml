@@ -1,0 +1,8 @@
+[tool.isort]
+profile = "black"
+src_paths = ["app"]
+skip_gitignore = true
+
+[tool.mypy]
+strict = true
+exclude = ["ubuntu", ".venv"]
