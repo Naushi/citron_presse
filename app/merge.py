@@ -1,5 +1,7 @@
 from PyPDF2 import PdfMerger
-from constants import PDF_FOLDER, OUTPUT_PDF
+
+from constants import OUTPUT_PDF, PDF_FOLDER
+
 
 def merge_prints(badges):
     merger = PdfMerger()

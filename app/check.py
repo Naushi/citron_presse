@@ -1,7 +1,10 @@
-from constants import PDF_FOLDER
 import os
 from typing import List
+
 import pandas as pd
+
+from constants import PDF_FOLDER
+
 
 def check_folders(fandoms: List[str], dataframe: pd.DataFrame) -> None:
     for value in fandoms:
