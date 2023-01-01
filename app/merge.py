@@ -12,3 +12,4 @@ def merge_prints(badges):
                 merger.append(f"{PDF_FOLDER}{fandom}/{badge['name']}.pdf")
     merger.write(OUTPUT_PDF)
     merger.close()
+    print(f"File created in {OUTPUT_PDF}")

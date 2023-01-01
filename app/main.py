@@ -9,13 +9,10 @@ from constants import EXCEL_FILE, PDF_FOLDER
 from load import load_data
 from merge import merge_prints
 
-# create file with all that
-# finish
-
 
 def main() -> None:
     raw_badges, fandoms, df = load_data()
-    # check_folders(fandoms, df)
+    check_folders(fandoms, df)
     badges = compute_prints(raw_badges)
     print(badges)
     merge_prints(badges)

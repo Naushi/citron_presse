@@ -1,6 +1,5 @@
 import glob
 import os
-from typing import NoReturn
 
 from PyPDF2 import PdfFileReader, PdfFileWriter
 

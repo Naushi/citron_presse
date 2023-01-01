@@ -18,7 +18,5 @@ def check_files(fandom: str, dataframe: pd.DataFrame) -> None:
     files = dataframe.query(f'`Fandom` == "{fandom}"')["Nom du Badge"].unique()
     for file in files:
         file_path = f"{PDF_FOLDER}{fandom}/{file}.pdf"
-        if os.path.exists(file_path):
-            pass
-        else:
+        if not os.path.exists(file_path):
             print(f"{file_path} is missing.")
